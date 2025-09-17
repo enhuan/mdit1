@@ -10,7 +10,7 @@ from prophet import Prophet
 # --- Load Data ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv("pricecatcher_2025-08.csv")
+    df = pd.read_csv("https://drive.google.com/uc?id=1PgfZ2EAaQF-4wIPs_hQgVgDCJnEd7Bxi&export=download")
     items = pd.read_csv("lookup_item.csv")
     premises = pd.read_csv("lookup_premise.csv")
 
@@ -72,3 +72,4 @@ if len(daily) > 10:
 
 else:
     st.warning("Not enough data for this selection.")
+
